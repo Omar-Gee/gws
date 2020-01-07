@@ -1,21 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from 'styled-components'
+import image from '../images/oming-soon.jpeg'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import './reset.css'
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <Container>
+    <TextContainer>
+      <Text style={{ fontSize: '80px' }}>
+        coming soon
+    </Text>
+      <Text>
+        geermanwebsolutions.nl
+    </Text>
+    </TextContainer>
+
+  </Container>
 )
 
 export default IndexPage
+
+const Container = styled.div`
+  background: url(${image}) center center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+`
+const TextContainer = styled.div`
+
+`
+const Text = styled.h1`
+  color: #fff;
+  font-family: Arial;
+  text-align: center;
+  padding: 24px 0;
+`
